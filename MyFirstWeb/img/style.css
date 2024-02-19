@@ -1,0 +1,159 @@
+/* pseudo elementos */
+:root {
+    --primary-color-gray: #6E788E;
+    --blue-sky: #4485ff;
+    --background-color: #191d25;
+    --withe-color: blanchedalmond;
+    --selected-color-gray: #24272e;
+    --heart-eater-opiuml-color: #df3149;
+}
+
+* {
+    background-color: var(--background-color);
+    text-decoration: none;
+}
+
+.colorText {
+    color: var(--withe-color);
+}
+
+.colorSecondText {
+    color: var(--primary-color-gray);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 99vw;
+    height: 97vh;
+}
+
+.links {
+    color: var(--blue-sky);
+}
+
+.twittBackground{
+    border-color: transparent transparent var(--primary-color-gray) transparent;
+    border-style: solid;
+    border-width: 0.5px;
+    width: 700px;
+    height: 500px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+
+.twittBackground:hover{
+    cursor: pointer;
+    background-color: var(--selected-color-gray);
+    transition: 0.25s;
+    border-radius: 20px;
+
+}
+
+.twittBackground:hover *{
+    background-color: transparent;
+}
+
+.profileZone{
+
+}
+
+.profileZone > img{
+    width: 75%;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.twittContent img{
+    border-radius: 20px;
+    border-color: var(--primary-color-gray);
+    border-style: solid;
+    border-width: 0.5px;
+    width: 90%;
+}
+
+.twittBody{
+    grid-column: repeat(1/13);
+    grid-row: repeat(1/13);
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    grid-template-rows: 1fr;
+}
+
+.twittBody p {
+    padding: 10px 0px;
+}
+
+.twittIcons{
+    display: flex;
+    grid-column: repeat(1/13);
+    grid-row: repeat(12/13);
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: var(--primary-color-gray);
+}
+
+.icon:nth-child(1):hover svg{
+    border-radius: 50%;
+    background-color: var(--blue-sky);
+    fill: rgb(119, 182, 253);
+    transition: 0.25s;
+}
+
+.icon:nth-child(1):hover span{
+    color: var(--blue-sky);
+}
+
+.icon:nth-child(2):hover svg{
+    border-radius: 50%;
+    background-color: #00979c;
+    fill: #7dd3d6;
+    transition: 0.25s;
+}
+
+.icon:nth-child(2):hover span{
+    color: #00979c;
+}
+
+.icon:nth-child(3):hover svg{
+    border-radius: 50%;
+    background-color: var(--heart-eater-opiuml-color);
+    fill: #ff7486;
+    transition: 0.25s;
+}
+
+.icon:nth-child(3):hover span{
+    color: var(--heart-eater-opiuml-color);
+}
+
+.icon:nth-child(4):hover svg{
+    border-radius: 50%;
+    background-color: #00c451;
+    fill: #85e4ac;
+    transition: 0.25s;
+}
+
+img, svg{
+    max-width: 100%;
+    max-height: auto;
+}
+
+.icon {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.icon svg {
+    padding: 5px;
+    width: 50%;
+    margin-right: 5px;
+    fill: var(--primary-color-gray);
+}
+
+.icon span {
+    font-size: small;
+}
